@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://KinematicRb.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ModeSwitcher.tscn" type="PackedScene" id=2]
+
+[node name="main" type="Node2D"]
+
+[node name="Perpendicular" type="Node2D" parent="."]
+position = Vector2( 61.855, 280.897 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="Perpendicular" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+
+[node name="ModeSwitcher" parent="Perpendicular" instance=ExtResource( 2 )]
+vel = Vector2( 30, 0 )
+
+[node name="Rotated Rb" type="Node2D" parent="."]
+position = Vector2( 68.0066, 90.1958 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="Rotated Rb" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+rotation = 0.0174533
+
+[node name="ModeSwitcher" parent="Rotated Rb" instance=ExtResource( 2 )]
+vel = Vector2( 30, 0 )
+
+[node name="Rotated Rb2" type="Node2D" parent="."]
+position = Vector2( 299.718, 86.0948 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="Rotated Rb2" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+rotation = 1.5708
+
+[node name="ModeSwitcher" parent="Rotated Rb2" instance=ExtResource( 2 )]
+vel = Vector2( 30, 0 )
+
+[node name="45d" type="Node2D" parent="."]
+position = Vector2( 678.567, 85.7081 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="45d" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+
+[node name="ModeSwitcher" parent="45d" instance=ExtResource( 2 )]
+position = Vector2( -12.3805, -51.8433 )
+vel = Vector2( 30, 30 )
+
+[node name="45+" type="Node2D" parent="."]
+position = Vector2( 866.975, 82.9169 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="45+" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+
+[node name="ModeSwitcher" parent="45+" instance=ExtResource( 2 )]
+position = Vector2( 3.90961, -33.8384 )
+vel = Vector2( 30, 50 )
+
