@@ -21,7 +21,7 @@ position = Vector2( 60, 0 )
 vel = Vector2( 30, 0 )
 
 [node name="Rotate 0 circle" type="Node2D" parent="."]
-position = Vector2( 292.252, 311.426 )
+position = Vector2( 292.252, 313.184 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -31,6 +31,32 @@ vel = Vector2( 40, 0 )
 
 [node name="KinematicCircle" parent="Rotate 0 circle" instance=ExtResource( 4 )]
 position = Vector2( 80, 0 )
+
+[node name="Rotate 90d circle" type="Node2D" parent="."]
+position = Vector2( 285.22, 401.088 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ModeSwitcher" parent="Rotate 90d circle" instance=ExtResource( 3 )]
+vel = Vector2( 40, 0 )
+
+[node name="KinematicCircle" parent="Rotate 90d circle" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+rotation = 1.5708
+
+[node name="Rotate 180d circle2" type="Node2D" parent="."]
+position = Vector2( 489.158, 387.024 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ModeSwitcher" parent="Rotate 180d circle2" instance=ExtResource( 3 )]
+vel = Vector2( 40, 0 )
+
+[node name="KinematicCircle" parent="Rotate 180d circle2" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+rotation = 3.14159
 
 [node name="Rotate 1d circle" type="Node2D" parent="."]
 position = Vector2( 290.494, 207.699 )
