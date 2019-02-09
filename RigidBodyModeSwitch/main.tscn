@@ -5,67 +5,103 @@
 
 [node name="main" type="Node2D"]
 
-[node name="Perpendicular" type="Node2D" parent="."]
-position = Vector2( 61.855, 280.897 )
+[node name="Rotated 0d" type="Node2D" parent="."]
+position = Vector2( 81.2812, 75.842 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="KinematicRb" parent="Perpendicular" instance=ExtResource( 1 )]
+[node name="KinematicRb" parent="Rotated 0d" instance=ExtResource( 1 )]
 position = Vector2( 60, 0 )
 
-[node name="ModeSwitcher" parent="Perpendicular" instance=ExtResource( 2 )]
+[node name="ModeSwitcher" parent="Rotated 0d" instance=ExtResource( 2 )]
 vel = Vector2( 30, 0 )
 
-[node name="Rotated Rb" type="Node2D" parent="."]
-position = Vector2( 68.0066, 90.1958 )
+[node name="Rotated 1d" type="Node2D" parent="."]
+position = Vector2( 76.6405, 211.07 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="KinematicRb" parent="Rotated Rb" instance=ExtResource( 1 )]
+[node name="KinematicRb" parent="Rotated 1d" instance=ExtResource( 1 )]
 position = Vector2( 60, 0 )
 rotation = 0.0174533
 
-[node name="ModeSwitcher" parent="Rotated Rb" instance=ExtResource( 2 )]
+[node name="ModeSwitcher" parent="Rotated 1d" instance=ExtResource( 2 )]
 vel = Vector2( 30, 0 )
 
-[node name="Rotated Rb2" type="Node2D" parent="."]
-position = Vector2( 299.718, 86.0948 )
+[node name="Rotated 90d" type="Node2D" parent="."]
+position = Vector2( 373.106, 70.9855 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="KinematicRb" parent="Rotated Rb2" instance=ExtResource( 1 )]
+[node name="KinematicRb" parent="Rotated 90d" instance=ExtResource( 1 )]
 position = Vector2( 60, 0 )
 rotation = 1.5708
 
-[node name="ModeSwitcher" parent="Rotated Rb2" instance=ExtResource( 2 )]
+[node name="ModeSwitcher" parent="Rotated 90d" instance=ExtResource( 2 )]
 vel = Vector2( 30, 0 )
 
-[node name="45d" type="Node2D" parent="."]
-position = Vector2( 678.567, 85.7081 )
+[node name="Rotated 180" type="Node2D" parent="."]
+position = Vector2( 230.647, 77.4609 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="KinematicRb" parent="45d" instance=ExtResource( 1 )]
+[node name="KinematicRb" parent="Rotated 180" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+rotation = 3.14159
+
+[node name="ModeSwitcher" parent="Rotated 180" instance=ExtResource( 2 )]
+vel = Vector2( 30, 0 )
+
+[node name="45d inc" type="Node2D" parent="."]
+position = Vector2( 553.375, 70.5988 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="45d inc" instance=ExtResource( 1 )]
 position = Vector2( 60, 0 )
 
-[node name="ModeSwitcher" parent="45d" instance=ExtResource( 2 )]
+[node name="ModeSwitcher" parent="45d inc" instance=ExtResource( 2 )]
 position = Vector2( -12.3805, -51.8433 )
 vel = Vector2( 30, 30 )
 
-[node name="45+" type="Node2D" parent="."]
-position = Vector2( 866.975, 82.9169 )
+[node name="45+ inc" type="Node2D" parent="."]
+position = Vector2( 666.237, 69.9661 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="KinematicRb" parent="45+" instance=ExtResource( 1 )]
+[node name="KinematicRb" parent="45+ inc" instance=ExtResource( 1 )]
 position = Vector2( 60, 0 )
 
-[node name="ModeSwitcher" parent="45+" instance=ExtResource( 2 )]
+[node name="ModeSwitcher" parent="45+ inc" instance=ExtResource( 2 )]
 position = Vector2( 3.90961, -33.8384 )
 vel = Vector2( 30, 50 )
+
+[node name="45+ inc 2" type="Node2D" parent="."]
+position = Vector2( 798.759, 67.8077 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicRb" parent="45+ inc 2" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+
+[node name="ModeSwitcher" parent="45+ inc 2" instance=ExtResource( 2 )]
+position = Vector2( 3.90961, -70.4912 )
+vel = Vector2( 30, 100 )
+
+[node name="From top" type="Node2D" parent="."]
+position = Vector2( 793.485, 268.23 )
+
+[node name="KinematicRb" parent="From top" instance=ExtResource( 1 )]
+position = Vector2( 60, 0 )
+
+[node name="ModeSwitcher" parent="From top" instance=ExtResource( 2 )]
+position = Vector2( 56.6522, -77.5236 )
+vel = Vector2( 0, 50 )
 
