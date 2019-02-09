@@ -11,6 +11,9 @@ func _physics_process(delta: float) -> void:
 	if ci:
 		vel = vel.bounce(ci.normal)
 		var collider :=  ci.get_collider() as RigidBody2D
-		if collider.get_mode() != RigidBody2D.MODE_RIGID:
-			print("Set RB mode on : " + str(collider.name))
+		if collider and collider.get_mode() != RigidBody2D.MODE_RIGID:
+			#print("Set RB mode on : " + str(collider.name))
 			collider.set_mode(RigidBody2D.MODE_RIGID)
+			# Manually setting the sleeping state on the
+			# target rigid body, bypasses the bug.
+			#collider.sleeping = false
