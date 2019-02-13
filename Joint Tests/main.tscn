@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://mouse.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 600, 10 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+radius = 30.0
+
+[sub_resource type="RectangleShape2D" id=3]
+
+extents = Vector2( 30, 30 )
+
+[node name="main" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ground" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 509.548, 593.321 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+shape = SubResource( 1 )
+
+[node name="ball" type="RigidBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 428.119, 228.792 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+shape = SubResource( 2 )
+
+[node name="ball2" type="RigidBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 831.662, 232.668 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball2"]
+shape = SubResource( 2 )
+
+[node name="mouse" type="KinematicBody2D" parent="."]
+position = Vector2( 428.106, 145.891 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse"]
+shape = SubResource( 3 )
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="mouse"]
+position = Vector2( 0, 30 )
+node_a = NodePath("..")
+node_b = NodePath("../../ball")
+
+[node name="StuckToGroundSpring" type="DampedSpringJoint2D" parent="."]
+position = Vector2( 831.805, 183.114 )
+node_a = NodePath("../ground")
+node_b = NodePath("../ball2")
+stiffness = 64.0
+
