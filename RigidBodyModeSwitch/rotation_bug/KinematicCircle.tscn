@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="CircleShape2D" id=1]
-
 radius = 20.0
 
 [node name="KinematicCircle" type="RigidBody2D"]
