@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://framediff_bug/rbtestobject.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 45, 10 )
+
+[node name="RigidBody2D" type="RigidBody2D"]
+can_sleep = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.44014, -16.2847 )
+scale = Vector2( 0.424352, 0.424352 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = -47.7248
+margin_top = -44.9354
+margin_right = 52.2752
+margin_bottom = -4.93538
+
